@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrightSmiles Dental</title>
+  <meta name="description" content="Family & cosmetic dentistry. Book cleanings, exams, and emergency visits online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0d1117;--panel:#0f172a;--muted:#94a3b8;--text:#e2e8f0;--brand:#16a34a;--brand-2:#22c55e;--line:#1f2937;--ring:rgba(34,197,94,.35)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0d1117,#0b1220 60%,#0a1324);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 1rem}
+    /* Header */
+    header{position:sticky;top:0;z-index:40;background:rgba(13,17,23,.75);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .brand{display:flex;gap:.6rem;align-items:center;font-weight:700}
+    .logo{width:34px;height:34px;border-radius:9px;background:conic-gradient(from 180deg at 50% 50%,var(--brand),var(--brand-2));display:grid;place-items:center;color:#052e16;font-weight:900}
+    .nav a{opacity:.9}
+    .nav a:hover{opacity:1}
+    .menu{display:flex;gap:1rem;align-items:center}
+    .btn{display:inline-grid;place-items:center;padding:.72rem 1rem;border-radius:12px;border:1px solid #1f2937;background:#0b1220}
+    .btn.primary{background:linear-gradient(180deg,var(--brand-2),var(--brand));color:#052e16;font-weight:700;border-color:#14532d}
+    .btn.primary:hover{filter:brightness(1.05)}
+    .btn.ghost:hover{border-color:#334155}
+    .mobile-toggle{display:none}
+
+    /* Hero */
+    .hero{padding:5rem 0 3rem;border-bottom:1px solid var(--line);background:
+      radial-gradient(900px 400px at 10% -10%,rgba(34,197,94,.15),transparent 60%),
+      radial-gradient(900px 400px at 110% 0,rgba(34,197,94,.12),transparent 60%)}
+    .hero h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:0 0 1rem}
+    .sub{color:var(--muted);max-width:60ch}
+    .hero-cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}
+    .badges{display:flex;gap:1rem;margin-top:1.3rem;flex-wrap:wrap}
+    .badge{border:1px solid #1f2937;border-radius:999px;padding:.45rem .7rem;color:var(--muted);font-size:.9rem}
+
+    /* Sections */
+    section{padding:3.2rem 0;border-bottom:1px solid var(--line)}
+    h2{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 1rem}
+    .grid{display:grid;gap:1.2rem}
+    @media(min-width:900px){.grid.cols-2{grid-template-columns:1.2fr 1fr}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:linear-gradient(180deg,#0f172a,#0b1220);border:1px solid #1f2937;border-radius:16px;padding:1rem}
+    .muted{color:var(--muted)}
+
+    /* Services */
+    .services{display:grid;gap:1rem}
+    @media(min-width:800px){.services{grid-template-columns:repeat(3,1fr)}}
+    .service{border:1px solid #1f2937;border-radius:16px;padding:1rem;background:#0b1220}
+    .service h3{margin:.2rem 0 .4rem}
+
+    /* Appointment form */
+    form{display:grid;gap:.8rem}
+    input,select,textarea{width:100%;padding:.8rem;border-radius:12px;border:1px solid #1f2937;background:#0a1324;color:var(--text)}
+    input:focus,select:focus,textarea:focus{outline:2px solid var(--ring);border-color:#14532d}
+    .two{display:grid;gap:.8rem}
+    @media(min-width:700px){.two{grid-template-columns:1fr 1fr}}
+    .hint{font-size:.9rem;color:var(--muted)}
+
+    /* Footer */
+    footer{padding:2rem 0;color:var(--muted)}
+    .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;border-top:1px solid var(--line);padding-top:1rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo">B</div> BrightSmiles Dental</div>
+      <nav class="menu" id="menu">
+        <a href="#services">Services</a>
+        <a href="#insurance">Insurance</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="#book">Book Now</a>
+      </nav>
+      <button class="mobile-toggle btn ghost" aria-label="Toggle Menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container grid cols-2">
+        <div>
+          <h1>Family & Cosmetic Dentistry — Simple Online Booking</h1>
+          <p class="sub">Cleanings, exams, whitening, emergencies. Open late on weekdays. Same‑day appointments often available.</p>
+          <div class="hero-cta">
+            <a href="#book" class="btn primary">Book an Appointment</a>
+            <a href="#services" class="btn ghost">View Services</a>
+          </div>
+          <div class="badges">
+            <span class="badge">Most insurances accepted</span>
+            <span class="badge">New patients welcome</span>
+            <span class="badge">0% financing options</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1606813907291-76a5c6a8e1d1?q=80&w=1200&auto=format&fit=crop" alt="Modern dental operatory" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="muted">Preventive, restorative, and cosmetic dentistry tailored to your smile.</p>
+        <div class="services">
+          <div class="service"><h3>Cleanings & Exams</h3><p class="muted">Routine checkups, x‑rays, and personalized hygiene plans.</p></div>
+          <div class="service"><h3>Whitening</h3><p class="muted">In‑office and take‑home options for brighter teeth.</p></div>
+          <div class="service"><h3>Emergency Care</h3><p class="muted">Same‑day relief for pain, chips, and broken restorations.</p></div>
+          <div class="service"><h3>Fillings & Crowns</h3><p class="muted">Tooth‑colored restorations that look and feel natural.</p></div>
+          <div class="service"><h3>Implants</h3><p class="muted">Long‑term solutions to replace missing teeth.</p></div>
+          <div class="service"><h3>Clear Aligners</h3><p class="muted">Discreet orthodontic treatment for teens & adults.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insurance & Finance -->
+    <section id="insurance">
+      <div class="container grid cols-2">
+        <div>
+          <h2>Insurance & Financing</h2>
+          <p class="muted">We accept most PPO plans. Transparent estimates before treatment. HSA/FSA welcomed.</p>
+          <ul class="muted">
+            <li>Verify your benefits in minutes</li>
+            <li>Interest‑free payment plans on approval</li>
+            <li>Simple, itemized statements</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Check your coverage</h3>
+          <form id="eligibility-form">
+            <div class="two">
+              <input required name="first" placeholder="First name" />
+              <input required name="last" placeholder="Last name" />
+            </div>
+            <input required name="dob" type="date" placeholder="Date of birth" />
+            <input required name="member" placeholder="Insurance member ID" />
+            <button class="btn primary" type="submit">Verify Benefits</button>
+            <p class="hint">We’ll verify with your insurer and email you a summary. No PHI is stored in this demo.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team">
+      <div class="container grid cols-3">
+        <div>
+          <h2>Meet the Team</h2>
+          <p class="muted">Experienced clinicians using gentle techniques and modern tech.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=1200&auto=format&fit=crop" alt="Dentist" />
+          <h3>Dr. Jordan Patel</h3>
+          <p class="muted">General & Cosmetic Dentist</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1559757175-08c55801a882?q=80&w=1200&auto=format&fit=crop" alt="Hygienist" />
+          <h3>Sarah Nguyen, RDH</h3>
+          <p class="muted">Dental Hygienist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book / Contact -->
+    <section id="book">
+      <div class="container grid cols-2">
+        <div>
+          <h2>Book an Appointment</h2>
+          <p class="muted">Pick a visit type and your preferred date. We’ll confirm availability by text/email.</p>
+          <form id="book-form">
+            <select name="type" required>
+              <option value="">Select visit type</option>
+              <option>New Patient Exam & Cleaning</option>
+              <option>Cleaning</option>
+              <option>Whitening</option>
+              <option>Emergency</option>
+              <option>Consultation</option>
+            </select>
+            <div class="two">
+              <input required type="date" name="date" />
+              <input required type="time" name="time" />
+            </div>
+            <div class="two">
+              <input required name="name" placeholder="Full name" />
+              <input required type="tel" name="phone" placeholder="Phone" />
+            </div>
+            <input type="email" name="email" placeholder="Email (optional)" />
+            <textarea name="notes" rows="3" placeholder="Notes (optional)"></textarea>
+            <button class="btn primary" type="submit">Request Booking</button>
+            <p class="hint">Demo only — wire to your scheduler or Zapier/Make webhook.</p>
+          </form>
+        </div>
+        <div class="card" id="contact">
+          <h3>Contact & Hours</h3>
+          <p class="muted">123 Smile Ave, Suite 200 • (555) 123‑4567 • hello@brightsmiles.com</p>
+          <ul class="muted">
+            <li>Mon–Thu: 8:00am – 6:00pm</li>
+            <li>Fri: 8:00am – 4:00pm</li>
+            <li>Sat (select): 9:00am – 1:00pm</li>
+          </ul>
+          <a class="btn ghost" href="#">Get Directions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <small>© <span id="year"></span> BrightSmiles Dental. All rights reserved.</small>
+      <div style="display:flex;gap:1rem">
+        <a class="muted" href="#">Privacy</a>
+        <a class="muted" href="#">Accessibility</a>
+        <a class="muted" href="#">Patient Forms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menu = document.getElementById('menu');
+    function toggleMenu(){
+      const isOpen = getComputedStyle(menu).display !== 'none' && window.innerWidth < 900;
+      menu.style.display = isOpen ? 'none' : 'flex';
+    }
+    // Simple responsive menu for small screens
+    function setMenu(){ if(window.innerWidth<900){menu.style.display='none';document.querySelector('.mobile-toggle').style.display='grid'} else {menu.style.display='flex';document.querySelector('.mobile-toggle').style.display='none'} }
+    setMenu();
+    window.addEventListener('resize', setMenu);
+
+    // Demo form handlers (replace with your backend or scheduling API)
+    const bookForm = document.getElementById('book-form');
+    const eligibilityForm = document.getElementById('eligibility-form');
+    bookForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(bookForm));
+      alert(`Request received!\n\nType: ${data.type}\nDate: ${data.date} ${data.time}\nName: ${data.name}\nPhone: ${data.phone}`);
+      bookForm.reset();
+    });
+    eligibilityForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(eligibilityForm));
+      alert(`Eligibility request submitted for ${data.first} ${data.last}. We'll email results.`);
+      eligibilityForm.reset();
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
